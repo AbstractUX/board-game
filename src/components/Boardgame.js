@@ -47,7 +47,7 @@ class Boardgame extends React.Component {
         <div>
           <h2 className="score" style={{backgroundColor: 'lightyellow'}}>Player 1: ${this.state.player1data.money}</h2>
           <h2 className="score" style={{backgroundColor: 'lightgreen'}}>Player 2: ${this.state.player2data.money}</h2>
-          <Board />
+          <Board player1data={this.state.player1data} player2data={this.state.player2data} />
         </div>
         <button>Roll dice</button>
       </div>
