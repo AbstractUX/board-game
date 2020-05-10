@@ -1,0 +1,7 @@
+.score {
+  display: inline-block;
+  border: black solid 1px;
+  width: 200px;
+  padding: 2px;
+  left: 150;
+}

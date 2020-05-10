@@ -1,0 +1,14 @@
+.board {
+  width: 490px;
+  height: 490px;
+  border: black solid 1px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.space {
+  width: 70px;
+  height: 70px;
+  border: black solid 1px;
+  position: absolute;
+}
