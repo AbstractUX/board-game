@@ -1,9 +1,10 @@
 .board {
   width: 490px;
   height: 490px;
-  border: black solid 1px;
+  border: black solid 5px;
   margin: 0 auto;
   position: relative;
+  background-color: lightgray;
 }
 
 .space {
@@ -17,17 +18,40 @@
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  border: black solid 1px;
+  border: black solid 3px;
   margin: 2px;
   position: absolute;
 }
 
 .player1 {
-  background-color: lightyellow;
+  background-color: yellow;
   margin-right: 40px;
 }
 
 .player2 {
   background-color: lightgreen;
   margin-top: 40px;
+}
+
+.earn {
+  background-image: url("../img/earn.png");
+  opacity: 0.5;
+}
+
+.lose {
+  background-image: url("../img/lose.png");
+  opacity: 0.5;
+}
+
+.start {
+  background-image: url("../img/start.png");
+  opacity: 0.7;
+}
+
+.powerup {
+  background-image: url("../img/powerup.png");
+}
+
+.skull {
+  background-image: url("../img/skull.png");
 }
