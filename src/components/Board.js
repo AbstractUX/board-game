@@ -7,6 +7,7 @@ const Board = (props) => {
       {renderSpaces(props.boardData)}
       {renderPlayerDisplay("player1", props.player1data.space)}
       {renderPlayerDisplay("player2", props.player2data.space)}
+      <div className="dice"><h1>{props.roll}</h1></div>
     </div>
   )
 }
@@ -29,13 +30,13 @@ const renderSpaces = (boardData) => {
 
 const renderPlayerDisplay = (player, playerSpace) => {
   if (playerSpace < 7) {
-    return <div className={`${player} player`} style={{left: playerSpace * 70}}>P</div>;
+    return <div className={`${player} player`} style={{left: playerSpace * 70}}></div>;
   } else if (playerSpace < 13) {
-    return <div className={`${player} player`} style={{left: 420, top: (playerSpace * 70)-420}}>P</div>;
+    return <div className={`${player} player`} style={{left: 420, top: (playerSpace * 70)-420}}></div>;
   } else if (playerSpace < 19) {
-    return <div className={`${player} player`} style={{top: 420, right: (playerSpace * 70)-840}}>P</div>;
+    return <div className={`${player} player`} style={{top: 420, right: (playerSpace * 70)-840}}></div>;
   } else {
-    return <div className={`${player} player`} style={{right: 420, bottom: (playerSpace * 70)-1260}}>P</div>;
+    return <div className={`${player} player`} style={{right: 420, bottom: (playerSpace * 70)-1260}}></div>;
   }
 }
 

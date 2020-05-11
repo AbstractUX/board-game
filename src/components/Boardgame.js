@@ -47,7 +47,8 @@ class Boardgame extends React.Component {
       this.setState((prevState) => ({
         whoseTurn: 'Player 2',
         messageDisplay: `Player 1 rolled a ${roll}`,
-        player1data: {...prevState.player1data, space: (roll + prevState.player1data.space) % 24}
+        player1data: {...prevState.player1data, space: (roll + prevState.player1data.space) % 24},
+        roll: roll
       }), () => {
         this.checkSpaceLanded(whoseTurn);
       });
@@ -55,7 +56,8 @@ class Boardgame extends React.Component {
       this.setState((prevState) => ({
         whoseTurn: 'Player 1',
         messageDisplay: `Player 2 rolled a ${roll}`,
-        player2data: {...prevState.player2data, space: (roll + prevState.player2data.space) % 24}
+        player2data: {...prevState.player2data, space: (roll + prevState.player2data.space) % 24},
+        roll: roll
       }), () => {
         this.checkSpaceLanded(whoseTurn);
       });
@@ -120,7 +122,7 @@ class Boardgame extends React.Component {
         <div>
           <h2 className="score" style={{backgroundColor: 'lightyellow'}}>Player 1: ${this.state.player1data.money}</h2>
           <h2 className="score" style={{backgroundColor: 'lightgreen'}}>Player 2: ${this.state.player2data.money}</h2>
-          <Board boardData={this.state.boardData} player1data={this.state.player1data} player2data={this.state.player2data} />
+          <Board boardData={this.state.boardData} player1data={this.state.player1data} player2data={this.state.player2data} roll={this.state.roll} />
         </div>
         <h1>{this.state.whoseTurn}'s turn to roll.</h1>
         <h2>{this.state.messageDisplay}</h2>

@@ -7,6 +7,18 @@
   background-color: lightgray;
 }
 
+.dice {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  top: 40%;
+  position: relative;
+  border: black solid 5px;
+  border-radius: 10%;
+  background-color: white;
+  font-weight: bold;
+}
+
 .space {
   width: 70px;
   height: 70px;
