@@ -12,3 +12,16 @@ button {
   font-weight: bold;
   background-color: lightblue;
 }
+
+.power-up {
+  display: inline-block;
+  width: 90px;
+  height: 60px;
+  border: black solid 1px;
+  background-color: lightblue;
+  margin: 2px;
+}
+
+.power-up:hover {
+  background-color: yellow;
+}
